@@ -22,10 +22,9 @@ or `to obtain a debug token manually <https://tech.yandex.ru/oauth/doc/dg/tasks/
 
 .. code-block:: python
 
-    client_id = '6993a3cd88e34ac67574578th87h67r7fe341c'
     token = 'AQAg4h45h4DJk4545gBDqIln6hNJGet45DHJgVxCjncQ'
 
-    metrika = Metrika(client_id, token=token)
+    metrika = Metrika(token=token)
 
 Example usage
 -------------
