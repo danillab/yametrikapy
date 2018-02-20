@@ -11,7 +11,8 @@ To connect to Yandex.Metric, you need to get a code:
 - `The token by code entered by a user <https://tech.yandex.ru/oauth/doc/dg/reference/console-client-docpage/>`_
 
 .. code-block:: python
-
+    
+    # get code on https://oauth.yandex.ru/authorize?response_type=code&client_id={client_id}
     client_id = '6993a3cd88e34ac67574578th87h67r7fe341c'
     client_secret = 'AQAg4h45h4DJk4545gBDqIln6hNJGet45DHJgVxCjncQ'
     code = '3463468'
@@ -22,8 +23,8 @@ or `to obtain a debug token manually <https://tech.yandex.ru/oauth/doc/dg/tasks/
 
 .. code-block:: python
 
+    # get token on https://oauth.yandex.ru/authorize?response_type=token&client_id={client_id}
     token = 'AQAg4h45h4DJk4545gBDqIln6hNJGet45DHJgVxCjncQ'
-
     metrika = Metrika(token=token)
 
 Example usage
