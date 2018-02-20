@@ -1,4 +1,4 @@
-﻿# coding: utf-8
+# coding: utf-8
 
 import json
 
@@ -44,7 +44,7 @@ class APIException(Exception):
 
 class JSON2Obj(object):
     def __init__(self, page):
-        self.__dict__ = json.loads(page.decode())
+        self.__dict__ = json.loads(page)
 
 
 class Metrika(object):
@@ -104,7 +104,7 @@ class Metrika(object):
     STAT_DATA_COMPARISON = STAT_DATA + '/comparison'
     STAT_DATA_COMPARISON_DRILLDOWN = STAT_DATA_COMPARISON + '/drilldown'
 
-    def __init__(self, client_id, client_secret='', token='', code=''):
+    def __init__(self, client_id='', client_secret='', token='', code=''):
         self._client_id = client_id
         self._client_secret = client_secret
         self._token = token
@@ -168,13 +168,13 @@ class Metrika(object):
 
     def _headers(self):
         header = {
-            'User-Agent': self.user_agent,
-            'Accept': 'application/x-yametrika+json',
-            'Accept-Language': 'ru,en-us;q=0.7,en;q=0.3',
-            'Accept-Encoding': 'gzip,deflate',
-            'Accept-Charset': 'utf-8;q=0.7,*;q=0.7',
-            'Keep-Alive': '300',
-            'Connection': 'keep-alive',
+            # 'User-Agent': self.user_agent,
+            # 'Accept': 'application/x-yametrika+json',
+            # 'Accept-Language': 'ru,en-us;q=0.7,en;q=0.3',
+            # 'Accept-Encoding': 'gzip,deflate',
+            # 'Accept-Charset': 'utf-8;q=0.7,*;q=0.7',
+            # 'Keep-Alive': '300',
+            # 'Connection': 'keep-alive',
             'Authorization': 'OAuth %s' % self._token
         }
         return header
